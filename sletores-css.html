@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novos Seletores</title>
+    <style>
+        button:hover{ /* Pseudoelemento */
+            background-color: brown;
+        }
+
+        li{
+            color: blue;
+        }
+
+        li:first-child{
+            color: green;
+        }
+
+        li:last-child{
+            color: red;
+        }
+
+        li:nth-child(3){
+            color: orange;
+        }
+
+        p:first-child i{
+            background-color: yellow;
+        }
+
+        input[type="password"]{
+            color: magenta;
+        }
+
+        input[type="submit"]{
+            border-radius: 5px;
+            color: yellow;
+            background-color: black;
+        }
+
+        input[type="submit"]:active{
+            border-radius: 5px;
+            color: black;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button>Clique aqui</button>
+    <br>
+    <br>
+    <br>
+    <button>Clique aqui</button>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <br><br>
+    <div>
+        <p>Lorem ipsum, <i>dolor sit amet consectetur adipisicing</i> elit. Facilis, voluptas? Beatae, nulla! Repellendus commodi doloremque illum corporis reprehenderit sint veniam, saepe, vitae consectetur sapiente delectus alias deserunt, quisquam quam. Praesentium.</p>
+        <p>Lorem ipsum, <i>dolor sit amet consectetur adipisicing</i> elit. Facilis, voluptas? Beatae, nulla! Repellendus commodi doloremque illum corporis reprehenderit sint veniam, saepe, vitae consectetur sapiente delectus alias deserunt, quisquam quam. Praesentium.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, voluptas? Beatae, nulla! Repellendus commodi doloremque illum corporis reprehenderit sint veniam, saepe, vitae consectetur sapiente delectus alias deserunt, quisquam quam. Praesentium.</p>
+    </div>
+    <br><br>
+    <form action="">
+        <label for="">Nome:</label>
+        <input type="text" name="" id="">
+        <br>
+        <label for="">Senha:</label>
+        <input type="password" name="" id="">
+        <br>
+        <label for="">Confirme a senha:</label>
+        <input type="password" name="" id="">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

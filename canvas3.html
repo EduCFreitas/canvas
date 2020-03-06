@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Exemplo3</title>
+    <style>
+        #quadro{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="200" height="200" id="quadro">
+        <!-- <img src="assets/img/Alfa_Romeo-Giulia_GTA-2021-1280-01.jpg" alt=""> -->
+    </canvas>
+    <script>
+        var canvas=document.getElementById('quadro');
+        if(canvas.getContext){
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            // O canvas não trabalha com ângulos em graus, apenas em radianos
+            // Conversão: Math.PI/180*ângulo_desejado
+            ctx.arc(100,100,40,Math.PI/180*45,Math.PI/180*315);
+            // Fazendo as linhas
+            ctx.lineTo(100,100);
+            ctx.lineTo(129,129);
+            ctx.fillStyle = 'yellow';
+            ctx.fill(); // Preenchimento da forma
+            ctx.stroke();
+
+        }else{
+            alert('Navegador não suporta o recurso');
+        }
+    </script>
+</body>
+</html>

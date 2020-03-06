@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Exemplo2</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="300" height="300" id="quadro"></canvas>
+    <script>
+        var quadro = document.getElementById('quadro');
+        // Verificando se há suporte do navegador
+        if(quadro.getContext){
+            // ctx: abreviação de "contexto"
+            var ctx=quadro.getContext('2d');
+            ctx.fillStyle='rgba(0,149,147,0.8)';
+            ctx.fillRect(30,30,200,200);
+
+        }else{
+            alert('Não funciona neste navegador!')
+        }
+    </script>
+</body>
+</html>

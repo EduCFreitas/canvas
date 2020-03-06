@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        #quadro{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        #quadro:hover{
+            transition: 2s;
+            width: 150px;
+            background-color: black;
+            transition-timing-function: cubic-bezier(.17,.67,.83,.67);
+        }
+
+        #quadro1{
+            width: 150px;
+            height: 150px;
+        }
+
+        #quadro1:hover{
+            transition: 2s;
+            transform:rotate(180deg);
+            /* transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0); */
+            /* transform: translate(12px, 50%); */
+            /* transform: translateX(2em) */
+            /* transform: translateY(3in); */
+            /* transform: scale(2, 0.5); */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(0.5); */
+            /* transform: rotate(0.5turn); */
+            /* transform: skewX(30deg); */
+            /* transform: skewY(1.07rad); */
+            /* transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0); */
+            /* transform: scale3d(2.5, 1.2, 0.3); */
+            /* transform: perspective(17px); */
+            transition-timing-function: cubic-bezier(.33,.57,.74,.48);
+        }
+    </style>
+</head>
+<body>
+    <div id="quadro"></div>
+    <br><br>
+    <div id="quadro1"><img src="assets/img/Alfa_Romeo-Giulia_GTA-2021-1280-01.jpg" alt=""></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Exemplo1</title>
+    <style>
+        #quadro{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="300" height="200" id="quadro"></canvas>
+    <script>
+        // Desenhando uma linha no canvas
+        var canvas = document.getElementById('quadro');
+        
+        // Verificando se o navegador tem suporte
+        if(canvas.getContext){
+            var contexto = canvas.getContext('2d');
+            contexto.beginPath(); // Sinaliza início do desenho no canvas
+            // Primeira linha
+            contexto.moveTo(50, 30); // Início da linha
+            contexto.lineTo(150, 100); // Final da linha
+            contexto.strokeStyle = 'rgb(0,148,197)'; // Cor da linha
+            contexto.stroke(); // Desenha linha de acordo com parâmetros acima
+            // Segunda linha
+            contexto.beginPath();
+            contexto.moveTo(150, 100);
+            contexto.lineTo(250, 100);
+            contexto.strokeStyle = 'rgb(255,0,0)'
+            contexto.stroke(); 
+        }else{
+            alert('Elemento não é suportado pelo navegador!');
+        }
+    </script>
+</body>
+</html>
